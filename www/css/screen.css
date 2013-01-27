@@ -1,0 +1,25 @@
+/**! Screen stylesheet */
+
+@media screen, projection, tv {
+
+
+.flash.success {
+	background: #efe;
+	border-color: #090;
+	color: #090;
+}
+
+.flash.error, ul.error li {
+	background: #fee;
+	border-color: #d00;
+	color: #d00;
+}
+
+.flash.info {
+	background: #ffc;
+	border-color: #960;
+	color: #960;
+}
+
+
+}

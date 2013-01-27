@@ -1,0 +1,20 @@
+/**! Common stylesheet */
+
+@media all {
+
+
+body {
+	font-size: 13px;
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	color: #000;
+	background: #fff;
+}
+
+.flash {
+	margin: 16px 0;
+	padding: 12px 18px;
+	border: 1px solid #000;
+}
+
+
+}

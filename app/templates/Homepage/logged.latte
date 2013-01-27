@@ -1,0 +1,10 @@
+{block content}
+
+	<h2 n:block="title">Jste přihlášeni</h2>
+
+	<p>
+		<img src="{$avatar}" alt="{$name}"><br>
+		<a n:href="logout!, token => $logout_token">Odhlásit</a>
+	</p>
+
+{/block}

@@ -1,0 +1,19 @@
+services:
+
+	# === PRESENTER HELPERS ====================================
+
+	basePresenterHelper:
+		factory: PresenterHelpers\BaseHelper()
+		setup:
+			- injectBase( ... )
+
+	aclHelper < basePresenterHelper:
+		factory: PresenterHelpers\AclHelper()
+		setup:
+			- inject( ... )
+
+
+	# === MODEL SERVICES ====================================
+
+	facebookFacade: Model\Services\FacebookFacade( %facebook.appId%, %facebook.appSecret% )
+	facebookService: Model\Services\FacebookService( ... )

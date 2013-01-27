@@ -1,0 +1,26 @@
+nette:
+	session:
+		save_path: %tempDir%/sessions
+		expiration: + 14 days
+
+	debugger:
+		strictMode: TRUE
+
+	application:
+		errorPresenter: Error
+
+	database:
+		default:
+			dsn: '%database.driver%:host=%database.host%;dbname=%database.dbname%'
+			user: %database.username%
+			password: %database.password%
+
+	xhtml: FALSE
+
+
+services:
+
+	# === APPLICATION SERVICES ====================================
+
+	routerFactory: RouterFactory()
+	router: @routerFactory::createRouter()

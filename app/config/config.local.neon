@@ -1,0 +1,15 @@
+parameters:
+
+	database:
+		driver: mysql
+		host: <db_host>
+		username: <db_username>
+		password: <db_password>
+		dbname: <db_name>
+
+	facebook:
+		appId: '<your_app_id>'
+		appSecret: '<your_app_secret>'
+
+
+services:

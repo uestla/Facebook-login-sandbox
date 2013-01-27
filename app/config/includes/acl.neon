@@ -1,0 +1,25 @@
+nette:
+	security:
+
+		# === ROLES ====================================
+
+		roles:
+			guest: NULL
+			user: guest
+
+
+		# === RESOURCES ====================================
+		resources:
+			Frontend: NULL
+			Error: Frontend
+			Homepage: Frontend
+
+
+services:
+
+	# === PRIVILEGES ====================================
+
+	nette.authorizator:
+		setup:
+			- @self::allow( guest, Homepage, [ default, facebookLogin, logout! ] )
+			- @self::deny( user, Homepage, [ facebookLogin ] )
