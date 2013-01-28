@@ -1,7 +1,8 @@
 Facebook login using Nette Framework
 ====================================
 
-Quick steps to make this sandbox work:
+Quickstart
+----------
 
 - create [Facebook application](https://developers.facebook.com/apps) properly
 - create following table in your database:
@@ -24,6 +25,9 @@ CREATE TABLE `user` (
 
 - open **app/config/config.local.neon** and set your local environment variables
 
-Sitenotes:
 
+Sidenotes
+---------
+
+- take a look at ACL permissions & privileges defined in **app/config/includes/acl.neon** and checked in **app/presenters/helpers/AclHelper.php**
 - pay attention to CSRF protection at both login and logout links in **app/presenters/HomepagePresenter.php**
