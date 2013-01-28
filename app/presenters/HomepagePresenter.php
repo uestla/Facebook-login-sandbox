@@ -1,4 +1,3 @@
-
 <?php
 
 use Model\Services\FacebookFacade;
