@@ -1,3 +1,4 @@
+
 <?php
 
 use Model\Services\FacebookFacade;
@@ -99,6 +100,6 @@ class HomepagePresenter extends BasePresenter
 	private function getToken($namespace, $generate = TRUE, & $session = NULL)
 	{
 		$session = $this->getSession("fb.$namespace");
-		return isset($session->token) ? $session->token : ( $generate ? ($session->token = Nette\Utils\Strings::random()) : $session->token );
+		return isset($session->token) ? $session->token : ( $generate ? ($session->token = Nette\Utils\Strings::random()) : NULL );
 	}
 }
