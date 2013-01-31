@@ -58,7 +58,7 @@ class HomepagePresenter extends BasePresenter
 
 	function handleLogout($token)
 	{
-		if (($sToken = $this->getToken('logout', FALSE, $session)) && $token === $sToken) {
+		if (($sToken = $this->getToken('logout', FALSE, $session)) !== NULL && $token === $sToken) {
 			unset($session->token);
 			$this->user->logout(TRUE);
 			$this->redirectUrl( $this->facebook->getLogoutUrl(array(

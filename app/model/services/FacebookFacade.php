@@ -6,6 +6,7 @@ use Nette;
 use Facebook;
 use BaseFacebook;
 use Nette\Utils\Arrays;
+use ReflectionException;
 
 
 /**
@@ -96,11 +97,10 @@ class FacebookFacade extends Nette\Object
 	 */
 	function __call($name, $args)
 	{
-		$ref = Nette\Reflection\ClassType::from($this->fb);
+		try {
+			return Nette\Reflection\Method::from( $this->fb, $name )->invokeArgs( $this->fb, $args );
 
-		if ($ref->hasMethod($name)) {
-			return callback($this->fb, $name)->invokeArgs($args);
-		} else {
+		} catch (ReflectionException $e) { // method does not exist
 			return parent::__call($name, $args);
 		}
 	}
